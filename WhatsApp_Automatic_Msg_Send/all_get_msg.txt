@@ -1,0 +1,2 @@
+""" Here will be thoes names in Your Contacts 
+who received msg """

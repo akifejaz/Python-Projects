@@ -41,6 +41,7 @@ list is here ,
 > - pip install xlrd
 
 ##Step No3:
+
  You will need to install "chromedriver.exe" that is used to controll chrome browser
  after download , copy its path and put it in "PATH" in the program as it is 
  previously set as :

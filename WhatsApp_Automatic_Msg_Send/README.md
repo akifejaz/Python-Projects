@@ -33,8 +33,8 @@ otherwise you can export all of your contacts and program will automatically sen
 First of all you may need to install some pakages before you run program
 list is here , 
 
-> pip install selenium
-> pip install xlrd
+> - pip install selenium
+> - pip install xlrd
 
 ##Step No3: 
 

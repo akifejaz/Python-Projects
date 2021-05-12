@@ -20,7 +20,10 @@ can use any method you like.
 But if you confuse how to do this, I suggest you an app
 Install it and export your contacts.
 Name of Application : Export contacts for WhatsApp
+
+
 ![image](https://user-images.githubusercontent.com/81078376/118043830-51dc0100-b38f-11eb-8bfd-8ff11052d485.png)
+
 
 Source : https://play.google.com/store/apps/details?id=com.mix.wscontact&hl=en&gl=US
 
@@ -30,13 +33,20 @@ otherwise you can export all of your contacts and program will automatically sen
 
 
 ##Step No2:
+
 First of all you may need to install some pakages before you run program
 list is here , 
 
 > - pip install selenium
 > - pip install xlrd
 
-##Step No3: 
+##Step No3:
+ You will need to install "chromedriver.exe" that is used to controll chrome browser
+ after download , copy its path and put it in "PATH" in the program as it is 
+ previously set as :
+ > PATH = "C:\Program Files (x86)\chromedriver_win32\chromedriver.exe"
+
+##Step No4: 
 
 After clone , copying contact  in "NamesOnly.xlsx" file you are good to go.
 

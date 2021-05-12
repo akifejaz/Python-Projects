@@ -12,10 +12,6 @@ PATH = "C:\Program Files (x86)\chromedriver_win32\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
 contacts = []
 
-#For thoes who get msg
-all_get_msg = []
-#For thoes who not get msg
-all_not_get_msg = []
 
 def extract_contacts():
 

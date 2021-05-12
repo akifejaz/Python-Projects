@@ -1,16 +1,18 @@
-Introduction : 
+#Whatsapp Automatic Msg Send Program 
+
+##Introduction : 
 
 I made this simple task for myself specially, but sharing it here for others use
 Basically the idea is , If you want to send a special msg to all of your contacts
 you can do with this program.
 
 
-How To Use :
+##How To Use :
 
 Clone the code first
 
 
-Step No1:
+##Step No1:
 
 You need your whatsapp contacts for we use to send msg.
 In order to get all contacts that are available on whatsap you 
@@ -27,19 +29,19 @@ otherwise you can export all of your contacts and program will automatically sen
 
 
 
-Step No2:
+##Step No2:
 First of all you may need to install some pakages before you run program
 list is here , 
 
-pip install selenium
-pip install xlrd
+> pip install selenium
+> pip install xlrd
 
-Step No3: 
+##Step No3: 
 
 After clone , copying contact  in "NamesOnly.xlsx" file you are good to go.
 
 
 
 
-....Importent Note .... 
-Please wait , at initall time , You have to scan for the whatsapp to open upp on your browser
+###....Importent Note .... 
+> Please wait , at initall time , You have to scan for the whatsapp to open upp on your browser

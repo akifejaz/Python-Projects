@@ -101,6 +101,7 @@ To < """
 
 extract_contacts()
 open_whatsap()
+z = 0
 
 for contact in contacts:
 

@@ -21,7 +21,7 @@ def extract_contacts():
     sheet = wb.sheet_by_index(0)
 
     n = 1
-    while (n < 321): 
+    while (n < 237):
 # n = no of contacts in your excel file
 #In my case i have 321 contacts for whatsapp
 
@@ -70,60 +70,73 @@ def check_if_available_on_whatsap(contact):
 
 
 def send_msg(msg):
+    try:
+        send_msg = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+        send_msg.click()
+        time.sleep(1)
+    
+        #Send Your Msg + mention his name at end too 
+        send_msg.send_keys(msg + contact + " >")
+        time.sleep(1)
+        enter_button = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button/span')
+        enter_button.click()
+        time.sleep(1)
+        return True
 
-    send_msg = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
-    send_msg.click()
-    time.sleep(1)
-
-    # msg that will be send
-    send_msg.send_keys(msg)
-    time.sleep(1)
-    enter_button = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button/span')
-    enter_button.click()
-    time.sleep(1)
+    except:
+        return False
+    #true represent msg not sent Main reason maybe due to Person has blocked contact
 
 
 #Enter the msg here, that you want to send
 #Make sure the format for multiple lines use
-# """ Messege """ format 
+# """ Messege """ format
 
-msg = "!"
+msg = """
+_May Allah Shower His Countless Blessings Upon You And Your Family_
+_*A very Happy Eid Mubarak to You*_
+
+To < """
 
 
 extract_contacts()
 open_whatsap()
-x=0
-y=0
 
 for contact in contacts:
 
     search_contact(contact)
     if (check_if_available_on_whatsap(contact)):
-        send_msg(msg)
-        print("Msg Sent to : " + contact)
 
-        x=+1
-        f = open("all_get_msg.txt", "a")
-        f.write(contact)
-        f.write("\n")
-        f.close()
+        if (send_msg(msg)):
+            print("Msg Sent to : " + contact)
 
-    else :
+            f = open("all_get_msg.txt", "a")
+            f.write(contact)
+            f.write("\n")
+            f.close()
+
+        else:
+            print("Msg Not Sent to : " + contact)
+
+            f = open("all_not_get_msg.txt", "a")
+            f.write(contact)
+            f.write("\n")
+            f.close()
+
+    else:
         print("Msg Not Sent to : " + contact)
-        y = y+1
-
         f = open("all_not_get_msg.txt", "a")
         f.write(contact)
         f.write("\n")
         f.close()
+    print("Currently at : ", z)
 
 
 
 
 time.sleep(1)
-print ("Total Msg sent : ", x)
-print ("Total Not Msg sent : ", y)
+
 
 end_time = datetime.now()
-print('Duration: {}'.format(end_time - start_time))
+print('Duration of Program : {}'.format(end_time - start_time))
 driver.close()

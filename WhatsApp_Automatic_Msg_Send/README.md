@@ -56,3 +56,8 @@ After clone , copying contact  in "NamesOnly.xlsx" file you are good to go.
 
 ###....Importent Note .... 
 > Please wait , at initall time , You have to scan for the whatsapp to open upp on your browser
+ 
+
+#Working Video 
+> Follow Link : https://www.linkedin.com/posts/akifejaz_eidmubarak-whatsappbot-webautomation-activity-6798395384478732288-Els3
+> 

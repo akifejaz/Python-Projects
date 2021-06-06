@@ -47,6 +47,9 @@ list is here ,
 ##Step No3:
 
  You will need to install "chromedriver.exe" that is used to controll chrome browser
+ 
+ > https://chromedriver.chromium.org/downloads
+ 
  after download , copy its path and put it in "PATH" in the program as it is 
  previously set as :
  > PATH = "C:\Program Files (x86)\chromedriver_win32\chromedriver.exe"
